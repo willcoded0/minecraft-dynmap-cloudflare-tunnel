@@ -4,7 +4,7 @@ This repo documents how I host a Minecraft server and Dynmap web map
 on my homelab, and make them accessible over the internet using
 **Cloudflare Tunnel** instead of opening ports on my router.
 
----
+--
 
 ## 🕹️ What I'm Hosting
 
