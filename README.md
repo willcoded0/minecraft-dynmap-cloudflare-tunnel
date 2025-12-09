@@ -19,7 +19,7 @@ on my homelab, and make them accessible over the internet using
 I use **Cloudflare Tunnel** to route external traffic to my homelab:
 
 - Cloudflare Tunnel connects my server to Cloudflare’s network.
-- I point a hostname (e.g. `minecraft.mydomain.com` or `map.mydomain.com`)
+- I point a hostname (in my case, `https://batmap.win/`)
   at the tunnel.
 - Players and browsers connect via the hostname, not my home IP.
 
