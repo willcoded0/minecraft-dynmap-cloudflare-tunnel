@@ -1,42 +1,44 @@
 # Minecraft + Dynmap via Cloudflare Tunnel
 
-This repo documents how I host a Minecraft server and Dynmap web map
-on my homelab, and make them accessible over the internet using
-**Cloudflare Tunnel** instead of opening ports on my router.
-
---
-
-## 🕹️ What I'm Hosting
-
-- **Minecraft server** running on a Linux VM / container.
-- **Dynmap** plugin providing a live web-based map of the world.
-- Both services run on my Proxmox-based homelab server.
+A production game server with a live web map, hosted on my homelab and securely exposed
+to the internet via **Cloudflare Tunnel**. Served an active community of 10+ players
+with full server operations, moderation, and community management.
 
 ---
 
-## 🌐 How It’s Exposed to the Internet
+## What I'm Hosting
 
-I use **Cloudflare Tunnel** to route external traffic to my homelab:
-
-- Cloudflare Tunnel connects my server to Cloudflare’s network.
-- I point a hostname (in my case, `https://batmap.win/`)
-  at the tunnel.
-- Players and browsers connect via the hostname, not my home IP.
-
-This lets me:
-
-- Avoid opening Minecraft/Dynmap ports on my router.
-- Use Cloudflare’s DNS and HTTPS features.
-- Move services between machines or change local IPs without
-  changing how people connect.
+- **Minecraft server** running on a Linux VM in Proxmox VE
+- **Dynmap** plugin providing a live, web-based map of the world
+- **Public access** at `https://batmap.win/` via Cloudflare Tunnel
 
 ---
 
-## 🧪 What I Learned
+## Infrastructure
 
-From this setup I gained hands-on experience with:
+Cloudflare Tunnel routes external traffic to the homelab without opening any ports:
 
-- Running a game server on Linux.
-- Basic networking (ports, internal IPs, services).
-- Using **Cloudflare Tunnel** to expose internal services safely.
-- Treating a personal homelab like a small production environment.
+- Players and browsers connect via hostname, not the home IP
+- Cloudflare handles DNS, HTTPS, and DDoS protection
+- Services can be migrated between machines without changing how users connect
+
+---
+
+## Community Management
+
+Running a server for 10+ active players required more than just infrastructure:
+
+- **Moderation:** Enforcing rules, resolving player disputes, managing permissions and bans
+- **Leadership:** Coordinating events, onboarding new players, maintaining an active community
+- **Server Operations:** Performance monitoring, plugin configuration, backup scheduling, and uptime management
+- **Troubleshooting:** Diagnosing lag, resolving plugin conflicts, and handling player-reported issues in real time
+
+---
+
+## Skills Demonstrated
+
+- Linux server administration
+- Networking (ports, DNS, reverse proxy configuration)
+- Cloudflare Tunnel for secure service exposure
+- Community leadership and moderation at scale
+- Incident response and real-time troubleshooting
