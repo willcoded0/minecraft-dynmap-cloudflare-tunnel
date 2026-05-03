@@ -2,7 +2,7 @@
 
 Minecraft server infrastructure running on my homelab with a public Dynmap live web map and a custom companion dashboard.
 
-- **Live dashboard:** [db.batmap.win/resume](https://db.batmap.win/resume)
+- **Resume-safe live dashboard:** [https://db.batmap.win/resume](https://db.batmap.win/resume)
 - **Dynmap:** [map.batmap.win](https://map.batmap.win)
 - **Public access:** Cloudflare Tunnel, no open router ports
 
@@ -14,7 +14,7 @@ This started as a Minecraft + Dynmap + Cloudflare Tunnel setup, then grew into a
 
 - Minecraft server running in a Linux container/VM on Proxmox VE
 - Dynmap for the live browser world map
-- Custom Python dashboard served at `db.batmap.win`
+- Custom Python dashboard served at `db.batmap.win`, with the recruiter-safe public view at `/resume`
 - Cloudflare Tunnel for HTTPS public access without port forwarding
 - Systemd services for dashboard/process management
 
