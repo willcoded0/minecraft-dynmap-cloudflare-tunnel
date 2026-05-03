@@ -2,7 +2,7 @@
 
 Minecraft server infrastructure running on my homelab with a public Dynmap live web map and a custom companion dashboard.
 
-- **Live dashboard:** [db.batmap.win](https://db.batmap.win)
+- **Live dashboard:** [db.batmap.win/resume](https://db.batmap.win/resume)
 - **Dynmap:** [map.batmap.win](https://map.batmap.win)
 - **Public access:** Cloudflare Tunnel, no open router ports
 
@@ -18,16 +18,14 @@ This started as a Minecraft + Dynmap + Cloudflare Tunnel setup, then grew into a
 - Cloudflare Tunnel for HTTPS public access without port forwarding
 - Systemd services for dashboard/process management
 
-## Custom dashboard at db.batmap.win
+## Resume-safe dashboard at db.batmap.win/resume
 
-The dashboard wraps the live map and adds server-specific features that Dynmap does not provide cleanly by itself:
+The resume-safe dashboard wraps the live map and shows server-specific features without exposing live chat content:
 
 - Embedded Dynmap centered on the main city/base area
 - Live player list parsed from server logs
-- Live chat feed with join/leave events
 - Browser-local 12-hour timestamps, so CST/PST/etc. display correctly for each visitor
-- Web-to-game chat using Minecraft `tellraw`
-- Persistent web chat history saved on disk so browser refreshes and service restarts do not wipe messages
+- Chat-free recruiter/resume view; the private friends view has live chat and web-to-game `tellraw`
 - Playtime leaderboard calculated from current and archived Minecraft logs
 - Season display for the modded server by reading `seasons.dat`
 
